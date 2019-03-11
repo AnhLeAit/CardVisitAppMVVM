@@ -1,0 +1,11 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Disabled -->
+    <item android:state_enabled="false"
+        android:drawable="@drawable/save_button_inactive_background" />
+
+    <!-- Default color -->
+    <item android:state_enabled="true"
+        android:drawable="@drawable/save_button_active_background" />
+
+</selector>

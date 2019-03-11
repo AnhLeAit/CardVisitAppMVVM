@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="common_round_radius">8dp</dimen>
+    <dimen name="item_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_text">16sp</dimen>
+    <dimen name="card_text_small">14sp</dimen>
+    <dimen name="card_text_field">14sp</dimen>
+    <dimen name="avatar_width">100dp</dimen>
+    <dimen name="avatar_height">100dp</dimen>
+</resources>

@@ -1,0 +1,138 @@
+project.ext {
+
+    androidxAppcompatVersion = "1.0.0-beta01"
+    androidxConstraintlayout = "1.1.2"
+    androidxMaterialVersion = "1.0.0-beta01"
+    arch = "1.1.1"
+    retrofit = "2.0.2"
+    googleGsonVersion = "2.8.0"
+    converterGsonVersion = "2.0.2"
+    constraintLayout = "1.1.2"
+    daggerVersion = "2.21"
+    butterKnifeVersion = "8.8.1"
+    rxJavaVersion = "2.1.0"
+    rxAndroidVersion = "2.0.1"
+    rxRoomAndroidXVersion = "2.0.0"
+    glideVersion = "4.9.0"
+    roomVersion = "1.1.1"
+    retrofitRxAdapterVersion = "1.0.0"
+    okhttp3LoggingVersion = "3.2.0"
+    dateTimePickerVersion = "4.1.2"
+    pagingRuntimeVersion = "1.01"
+    junitVersion = "4.12"
+    testRunnerVersion = "1.1.0"
+    espressoVersion = "3.1.0-alpha4"
+    espressoIntentsVersion = "2.2.2"
+    espressoContribVersion = "2.0"
+    archCoreTestingVersion = "1.1.1"
+    roomTestingVersion = "2.0.0-rc01"
+    roomMigrationVersion = "2.0.0-rc01"
+    coreTestingVersion = "2.0.0"
+    mockitoCoreVersion = "2.10.0"
+    livedataTestVersion="1.1.0"
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.anhle.app.cardvisit"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    // Library static in the source project
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    // Android X
+    implementation "androidx.appcompat:appcompat:$project.androidxAppcompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$project.androidxConstraintlayout"
+    implementation "com.google.android.material:material:$project.androidxMaterialVersion"
+
+    // REST full request
+    implementation "com.squareup.retrofit2:retrofit:$project.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$project.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$project.converterGsonVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$project.okhttp3LoggingVersion"
+    implementation "com.google.code.gson:gson:$project.googleGsonVersion"
+
+    // Room components
+    implementation "androidx.room:room-testing:$project.roomTestingVersion"
+    implementation "androidx.room:room-migration:$project.roomMigrationVersion"
+    implementation "android.arch.persistence.room:runtime:$project.roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$project.roomVersion"
+
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:$project.arch"
+
+    // Dagger 2
+    implementation "com.google.dagger:dagger:$project.daggerVersion"
+    implementation "com.google.dagger:dagger-android:$project.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$project.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    // ReactiveX
+    implementation "io.reactivex.rxjava2:rxjava:$project.rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$project.rxAndroidVersion"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$project.retrofitRxAdapterVersion"
+    implementation "android.arch.persistence.room:rxjava2:$project.roomVersion"
+    implementation "android.arch.paging:runtime:$project.pagingRuntimeVersion"
+
+
+    //Image loader
+    implementation "com.github.bumptech.glide:glide:$project.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$project.glideVersion"
+
+    // Datetime picker
+    implementation "com.wdullaer:materialdatetimepicker:$project.dateTimePickerVersion"
+
+    // For Unit test
+    testImplementation "junit:junit:$project.junitVersion"
+    testImplementation "android.arch.core:core-testing:$project.archCoreTestingVersion"
+
+    // For UI instruments testing
+    androidTestImplementation "androidx.test.ext:junit:$project.testRunnerVersion"
+    androidTestImplementation "androidx.test:rules:$project.testRunnerVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$project.espressoVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-intents:$project.espressoIntentsVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$project.espressoContribVersion"
+
+    // Room DB Unit testing
+    androidTestImplementation "android.arch.persistence.room:testing:$project.roomVersion"
+    androidTestImplementation "androidx.arch.core:core-testing:$project.coreTestingVersion"
+
+    // ViewModel Test
+    testImplementation "org.mockito:mockito-core:$project.mockitoCoreVersion"
+    testImplementation "com.jraska.livedata:testing:$project.livedataTestVersion"
+
+}

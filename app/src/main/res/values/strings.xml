@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Card Visit App</string>
+    <string name="loading_cards">Loading cards ...</string>
+    <string name="cards_list">Card list</string>
+    <string name="card_name">Display name</string>
+    <string name="card_list">Card List</string>
+    <string name="format_mobile">Mobile: %s</string>
+    <string name="format_address">Address: %s</string>
+    <string name="format_company">Company: %s</string>
+    <string name="format_position">Position: %s</string>
+    <string name="format_gender"><![CDATA[<b>Gender</b>: %s]]></string>
+    <string name="format_dob"><![CDATA[<b>DOB</b>: %s]]></string>
+    <string name="format_about"><![CDATA[<b>About</b>: %s]]></string>
+    <string name="loading_card">Loading Card ...</string>
+    <string name="textHintDisplayName">Name</string>
+    <string name="btn_label_save">Save</string>
+    <string name="textHintCompany">Company</string>
+    <string name="textHintAddress">Address</string>
+    <string name="textHintPosition">Position (E.g CEO, CTO))</string>
+    <string name="textHintAbout">About</string>
+    <string name="textHintGender">Gender</string>
+    <string name="textHintDOB">DOB</string>
+    <string name="title_new_card_visit">NEW CARD VISIT</string>
+    <string name="title_card_details">Card Details</string>
+    <string name="textHintSearch">Search</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+
+    <string name="err_msg_no_internet_connection">No internet connection!</string>
+</resources>
