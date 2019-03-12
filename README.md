@@ -1,18 +1,18 @@
 # Card visit app with MVVM & Unit Test
-The main purpose of this app is to show MVVM sample implementation using the new Google [Android Architecture Components][1] (View Model, Data Binding, Live Data, lifecycle aware) along with [Room][2] database and [Dagger 2][3] dependency injection to build a robust application (scalable, testable, easy to maintain and lanscape mode, never leak data when screen rotation with [LiveData][8]). Unit test with JUnit4, Mockito. UI instrumentation test with [Espresso][7].
+The main purpose of this app is to show MVVM sample implementation using the new Google [Android Architecture Components][1] (View Model, Data Binding, Live Data, lifecycle aware) along with [Room][2] database and [Dagger 2][3] dependency injection to build a robust application (scalable, testable, easy to maintain and landscape mode, never leak data when screen rotation with [LiveData][8]). Unit test with JUnit4, Mockito. UI instrumentation test with [Espresso][7].
 
 ## APK
 For quick look you can download the APK here!
 
 [<img src="/.assets/direct-apk-download.png"
       alt="Direct apk download"
-      height="80">](/.assets/apk/card-visit-app-mvvm-debug.apk)
+      height="80">](/.assets/apk/card-visit-app-mvvm-debug.apk?raw=true)
 
 ## App
 This Java version is my homework test for Android Dev at **be Corporation Vietnam**
 1. UI requirements:
 - Click on app icon > Show list of card visit (support paging, load 50 item/page)
-- Click card item > Show card detail
+- Click card item > Show card details
 - Click add new card > Show screen add new card
 - Click save button > save card in local storage then back to list screen
 and display new card at the top of the list
@@ -46,7 +46,7 @@ Make a robust application with Unit test
 
 #### Unit [test](/app/src/test)
 - Model basic test.
-- ViewModel unit test with Mockito and livdata Test lib.
+- ViewModel unit test with Mockito and [LiveData Testing](https://github.com/jraska/livedata-testing) library.
 
 #### UI Instrument [test](/app/src/androidTest)
 - Room DB test.
