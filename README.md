@@ -1,8 +1,14 @@
-# Card visit app with MVVM
-The main purpose of this app is to show MVVM sample implementation using the new Google [Android Architecture Components][1] (View Model, Data Binding, Live Data, lifecycle aware) along with [Room][2] database and [Dagger 2][3] dependency injection to build a robust application (scalable, testable, easy to maintain and lanscape mode, never leak data when screen rotation with [LiveData][8]). Unit test with JUnit4, Mockito and user interface and interactions: Use an Android UI instrumentation test with [Espresso][7].
+# Card visit app with MVVM & Unit Test
+The main purpose of this app is to show MVVM sample implementation using the new Google [Android Architecture Components][1] (View Model, Data Binding, Live Data, lifecycle aware) along with [Room][2] database and [Dagger 2][3] dependency injection to build a robust application (scalable, testable, easy to maintain and lanscape mode, never leak data when screen rotation with [LiveData][8]). Unit test with JUnit4, Mockito. UI instrumentation test with [Espresso][7].
+
+## APK
+For quick look you can download the APK here!
+[<img src="/.assets/direct-apk-download.png"
+      alt="Direct apk download"
+      height="80">](/.assets/apk/card-visit-app-mvvm-debug.apk)
 
 ## App
-This Java version is a result form "be Corporation Vietnam" Android Dev homework test.
+This Java version is my homework test for Android Dev at **be Corporation Vietnam**
 1. UI requirements:
 - Click on app icon > Show list of card visit (support paging, load 50 item/page)
 - Click card item > Show card detail
@@ -19,27 +25,27 @@ API get list of card visit from 2 API as following
 
 
 ### Architecture overview
-<img src="/screenshots/7.png" width="500" height="375"/>
+<img src="/.assets/mvvm-architecture.png" width="500" height="375"/>
 
-* di: Dagger 2 implementation to provide ineed ojbect for Retrofit API and ViewModel constructor.
-* service: REST full implement and Room DB to making a Repository access both Web and Local data sources.
-* util: some app util and constants.
-* view: UI components with databinding, adapter and screen activity.
-* viewmodel: Implement ViewModel class content LiveData and data logic to show at Views.
+- **di:** Dagger 2 implementation to provide in need object for Retrofit API and ViewModel constructor.
+- **service:** REST full implement and Room DB to making a Repository access both Web and Local data sources.
+- **util:** some app util and constants.
+- **view:** UI components with DataBinding, Adapters and screen activities.
+- **viewmodel:** Implement ViewModel class content LiveData and data logic to show at Views.
 
 
 ### Testing
 JUnit 4, [Mockito][4], [Espresso][7] for automated UI testing.
-<img src="/screenshots/7.png" width="500" height="316"/>
+<img src="/.assets/unit-test.jpg" width="500" height="316"/>
 Make a robust application with Unit test
 
-** Instrument test:
-- Room DB test.
-- Espresso for UI screen flow test.
-
-** Unit test:
+** Unit [test](/app/src/test)
 - Model basic test.
 - ViewModel unit test with Mockito and livdata Test lib.
+
+** UI Instrument [test](/app/src/androidTest)
+- Room DB test.
+- Espresso for UI screen flow test.
 
 
 ## Reference
@@ -49,12 +55,11 @@ Make a robust application with Unit test
 ## Screenshots
 | Home | 2 Segments | Search filter
 |:-:|:-:|:-:|
-| ![First](/screenshots/0.jpg?raw=true) | ![Sec](/screenshots/1.jpg?raw=true)  | ![Third](/screenshots/2.jpg?raw=true) |
+| ![First](/.assets/screenshots/0.jpg?raw=true) | ![Sec](/.assets/screenshots/1.jpg?raw=true)  | ![Third](/.assets/screenshots/2.jpg?raw=true) |
 
 | Card Details | Add new Card | Add new Card full fill
 |:-:|:-:|:-:|
-| ![Fourth](/screenshots/3.jpg?raw=true) | ![Fiveth](/screenshots/4.jpg?raw=true) | ![Sixth](/screenshots/5.jpg?raw=true) |
-
+| ![Fourth](/.assets/screenshots/3.jpg?raw=true) | ![Fiveth](/.assets/screenshots/4.jpg?raw=true) | ![Sixth](/.assets/screenshots/5.jpg?raw=true) |
 
 
 [1]: https://developer.android.com/topic/libraries/architecture/index.html
