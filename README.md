@@ -3,6 +3,7 @@ The main purpose of this app is to show MVVM sample implementation using the new
 
 ## APK
 For quick look you can download the APK here!
+
 [<img src="/.assets/direct-apk-download.png"
       alt="Direct apk download"
       height="80">](/.assets/apk/card-visit-app-mvvm-debug.apk)
@@ -25,6 +26,7 @@ API get list of card visit from 2 API as following
 
 
 ### Architecture overview
+
 <img src="/.assets/mvvm-architecture.png" width="500" height="375"/>
 
 - **di:** Dagger 2 implementation to provide in need object for Retrofit API and ViewModel constructor.
@@ -35,22 +37,20 @@ API get list of card visit from 2 API as following
 
 
 ### Testing
+
 JUnit 4, [Mockito][4], [Espresso][7] for automated UI testing.
+
 <img src="/.assets/unit-test.jpg" width="500" height="316"/>
+
 Make a robust application with Unit test
 
-** Unit [test](/app/src/test)
+#### Unit [test](/app/src/test)
 - Model basic test.
 - ViewModel unit test with Mockito and livdata Test lib.
 
-** UI Instrument [test](/app/src/androidTest)
+#### UI Instrument [test](/app/src/androidTest)
 - Room DB test.
 - Espresso for UI screen flow test.
-
-
-## Reference
-* [Google Architecture Components sample][5] project
-* [MVVM official guide][6]
 
 ## Screenshots
 | Home | 2 Segments | Search filter
@@ -60,6 +60,12 @@ Make a robust application with Unit test
 | Card Details | Add new Card | Add new Card full fill
 |:-:|:-:|:-:|
 | ![Fourth](/.assets/screenshots/3.jpg?raw=true) | ![Fiveth](/.assets/screenshots/4.jpg?raw=true) | ![Sixth](/.assets/screenshots/5.jpg?raw=true) |
+
+
+
+## Reference
+* [Google Architecture Components sample][5] project
+* [MVVM official guide][6]
 
 
 [1]: https://developer.android.com/topic/libraries/architecture/index.html
