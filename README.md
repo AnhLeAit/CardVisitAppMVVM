@@ -1,5 +1,5 @@
 # Card visit app with MVVM & Unit Test
-The main purpose of this app is to show MVVM sample implementation using the new Google [Android Architecture Components][1] (View Model, Data Binding, Live Data, lifecycle aware) along with [Room][2] database and [Dagger 2][3] dependency injection to build a robust application (scalable, testable, easy to maintain and landscape mode, never leak data when screen rotation with [LiveData][8]). Unit test with JUnit4, Mockito. UI instrumentation test with [Espresso][7].
+The main purpose of this app is to show MVVM sample implementation using the new Google [Android Architecture Components][1] (ViewModel, DataBinding, LiveData, ConstraintLayout and AndroidX inside) along with [Room][2] database and [Dagger 2][3] dependency injection to build a robust application (scalable, testable, easy to maintain and landscape mode, never leak data when screen rotation with [LiveData][8]). Unit test with JUnit4, Mockito. Use an Android UI instrumentation test with [Espresso][7].
 
 ## APK
 For quick look you can download the APK here!
@@ -31,8 +31,8 @@ API get list of card visit from 2 API as following
 
 - **di:** Dagger 2 implementation to provide in need object for Retrofit API and ViewModel constructor.
 - **service:** REST full implement and Room DB to making a Repository access both Web and Local data sources.
-- **util:** some app util and constants.
-- **view:** UI components with DataBinding, Adapters and screen activities.
+- **util:** Some app utils and constants.
+- **view:** UI components with DataBinding, ConstraintLayout, Adapters and screen activities.
 - **viewmodel:** Implement ViewModel class content LiveData and data logic to show at Views.
 
 
@@ -44,11 +44,11 @@ JUnit 4, [Mockito][4], [Espresso][7] for automated UI testing.
 
 Make a robust application with Unit test
 
-#### Unit [test](/app/src/test)
-- Model basic test.
+#### JUnit [test](/app/src/test)
+- Models basic test.
 - ViewModel unit test with Mockito and [LiveData Testing](https://github.com/jraska/livedata-testing) library.
 
-#### UI Instrument [test](/app/src/androidTest)
+#### User interface and interactions [test](/app/src/androidTest)
 - Room DB test.
 - Espresso for UI screen flow test.
 
